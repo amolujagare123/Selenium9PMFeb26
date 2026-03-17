@@ -1,0 +1,17 @@
+<suite name="Real Demo Suite">
+
+    <test name="Social and Shopping">
+        <classes>
+            <class name="TestNGDemo.RealDemo.SocialSites"/>
+            <class name="TestNGDemo.RealDemo.ShoppingSites"/>
+        </classes>
+    </test>
+
+    <test name="Streaming and Job Portals">
+        <classes>
+            <class name="TestNGDemo.RealDemo.VideoStreamingSites"/>
+            <class name="TestNGDemo.RealDemo.JobPortalSites"/>
+        </classes>
+    </test>
+
+</suite>
