@@ -12,6 +12,8 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.time.Duration;
+import java.util.ArrayList;
+import java.util.List;
 
 public class TestNGLoginDemo {
 
@@ -175,6 +177,67 @@ public class TestNGLoginDemo {
         String actual = "";
         try {
             actual = driver.findElement(By.xpath("//div[@class='field-error']")).getText();
+        }
+        catch (Exception e)
+        {
+
+        }
+        System.out.println("Expected="+expected);
+        System.out.println("Actual="+actual);
+
+        Assert.assertEquals(actual,expected,"Incorrect or No error message");
+
+
+    }
+
+    @Test
+    public void addCustomer2() {
+
+        WebDriver driver = new ChromeDriver();
+        driver.manage().window().maximize();
+        driver.get("https://amolujagare.com/stockmaster");
+
+        WebElement txtUsername = driver.findElement(By.name("email"));
+        txtUsername.sendKeys("amolujagare@gmail.com");
+
+        WebElement txtPassword = driver.findElement(By.id("pwField"));
+        txtPassword.sendKeys("admin123");
+
+        WebElement btnLogin = driver.findElement(By.className("btn-login"));
+        btnLogin.click();
+
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+
+        driver.findElement(By.partialLinkText("Customers")).click();
+        driver.findElement(By.linkText("+ Add Customer")).click();
+
+
+        driver.findElement(By.id("f_email")).sendKeys("tanishq.sharmagmail.com");
+
+        driver.findElement(By.id("f_phone")).sendKeys("sdsdsds");
+
+
+
+
+        driver.findElement(By.className("btn-primary")).click();
+
+       // driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+
+        ArrayList<String> expected = new ArrayList<>();
+        expected.add("Full name is required.");
+        expected.add("Enter a valid email address.");
+        expected.add("Valid phone number required.");
+
+        ArrayList<String> actual = new ArrayList<>();
+
+
+
+        try {
+            List<WebElement> wbList = driver.findElements(By.xpath("//div[@class ='field-error']"));
+
+            actual.add(wbList.get(0).getText());
+            actual.add(wbList.get(1).getText());
+            actual.add(wbList.get(2).getText());
         }
         catch (Exception e)
         {

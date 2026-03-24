@@ -28,25 +28,25 @@ public class ShoppingSites {
     @Test
     public void amazon() {
         driver.get("https://www.amazon.com");
-        driver.findElement(By.linkText("Sign in")).click();
+     //   driver.findElement(By.linkText("Sign in")).click();
     }
 
     @Test
     public void flipkart() {
         driver.get("https://www.flipkart.com");
-        driver.findElement(By.linkText("Login")).click();
+      //  driver.findElement(By.linkText("Login")).click();
     }
 
     @Test
     public void ebay() {
         driver.get("https://www.ebay.com");
-        driver.findElement(By.linkText("Sign in")).click();
+     //   driver.findElement(By.linkText("Sign in")).click();
     }
 
     @Test
     public void myntra() {
         driver.get("https://www.myntra.com");
-        driver.findElement(By.linkText("Login")).click();
+      //  driver.findElement(By.linkText("Login")).click();
     }
 
 }

@@ -28,25 +28,25 @@ public class JobPortalSites {
     @Test
     public void naukri() {
         driver.get("https://www.naukri.com");
-        driver.findElement(By.linkText("Login")).click();
+       // driver.findElement(By.linkText("Login")).click();
     }
 
     @Test
     public void indeed() {
         driver.get("https://www.indeed.com");
-        driver.findElement(By.linkText("Sign in")).click();
+       // driver.findElement(By.linkText("Sign in")).click();
     }
 
     @Test
     public void glassdoor() {
         driver.get("https://www.glassdoor.com");
-        driver.findElement(By.linkText("Sign In")).click();
+        //driver.findElement(By.linkText("Sign In")).click();
     }
 
     @Test
     public void shine() {
         driver.get("https://www.shine.com");
-        driver.findElement(By.linkText("Login")).click();
+      //  driver.findElement(By.linkText("Login")).click();
     }
 
 }

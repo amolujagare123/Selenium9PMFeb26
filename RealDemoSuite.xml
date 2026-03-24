@@ -1,5 +1,9 @@
 <suite name="Real Demo Suite">
 
+    <listeners>
+        <listener class-name="org.testng.reporters.EmailableReporter2"/>
+    </listeners>
+
     <test name="Social and Shopping">
         <classes>
             <class name="TestNGDemo.RealDemo.SocialSites"/>
