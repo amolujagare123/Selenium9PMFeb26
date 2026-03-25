@@ -1,5 +1,9 @@
 <suite name="Demo Project">
 
+    <listeners>
+        <listener class-name="ExtentReports.util.MyListeners"/>
+    </listeners>
+
     <test name="module 1">
 
         <classes>
